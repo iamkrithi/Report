@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Admission Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Online Admission Form</h2>
+        <form id="admissionForm" method="post">
+            <!-- Personal Information -->
+            <h3>Personal Information</h3>
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" required></textarea>
+
+            <!-- Academic Information -->
+            <h3>Academic Information</h3>
+            <label for="highestQualification">Highest Qualification:</label>
+            <input type="text" id="highestQualification" name="highestQualification" required>
+
+            <label for="instituteName">Institute Name:</label>
+            <input type="text" id="instituteName" name="instituteName" required>
+
+            <label for="yearOfCompletion">Year of Completion:</label>
+            <input type="number" id="yearOfCompletion" name="yearOfCompletion" required>
+
+            <label for="marks">Marks Obtained (%):</label>
+            <input type="number" id="marks" name="marks" step="0.01" required>
+
+            <!-- Course Preferences -->
+            <h3>Course Preferences</h3>
+            <label for="preferredCourse">Preferred Course:</label>
+            <select id="preferredCourse" name="preferredCourse" required>
+                <option value="Computer Science">Computer Science</option>
+                <option value="Mechanical Engineering">Mechanical Engineering</option>
+                <option value="Electrical Engineering">Electrical Engineering</option>
+                <option value="Business Administration">Business Administration</option>
+            </select>
+
+            <label for="preferredCampus">Preferred Campus:</label>
+            <input type="text" id="preferredCampus" name="preferredCampus" required>
+
+            <button type="submit" id="submitBtn">Submit</button>
+        </form>
+
+        <div id="response" style="display:none;">
+            <h3>Submitted Information:</h3>
+            <p><strong>Name:</strong> <span id="respName"></span></p>
+            <p><strong>Date of Birth:</strong> <span id="respDob"></span></p>
+            <p><strong>Gender:</strong> <span id="respGender"></span></p>
+            <p><strong>Email:</strong> <span id="respEmail"></span></p>
+            <p><strong>Phone Number:</strong> <span id="respPhone"></span></p>
+            <p><strong>Address:</strong> <span id="respAddress"></span></p>
+            <p><strong>Highest Qualification:</strong> <span id="respQualification"></span></p>
+            <p><strong>Institute Name:</strong> <span id="respInstitute"></span></p>
+            <p><strong>Year of Completion:</strong> <span id="respYear"></span></p>
+            <p><strong>Marks Obtained:</strong> <span id="respMarks"></span></p>
+            <p><strong>Preferred Course:</strong> <span id="respCourse"></span></p>
+            <p><strong>Preferred Campus:</strong> <span id="respCampus"></span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
